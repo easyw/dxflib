@@ -1,0 +1,5 @@
+dxflib (2.2.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #617623)
+
+ -- Scott Howard <showard@debian.org>  Wed, 09 Mar 2011 21:07:05 -0500

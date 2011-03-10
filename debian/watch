@@ -1,0 +1,5 @@
+version=3
+
+opts="uversionmangle=s/-.*//" \
+  http://www.qcad.org/dxflib_downloads.html \
+  ftp://anonymous:anonymous@ribbonsoft.com/archives/dxflib/dxflib-(.*)\.src\.tar\.gz

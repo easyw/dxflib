@@ -1,0 +1,5 @@
+fparser for Debian
+-----------------
+
+fparser is usually used by linking the source code of the library directly to
+ projects. To distribute as a shared library, Debian added autotools building

@@ -1,0 +1,82 @@
+Description: Upstream changes introduced in version 2.2.0.0-1
+ This patch has been created by dpkg-source during the package build.
+ Here's the last changelog entry, hopefully it gives details on why
+ those changes were made:
+ .
+ dxflib (2.2.0.0-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #617623)
+ .
+ The person named in the Author field signed this changelog entry.
+Author: Scott Howard <showard@debian.org>
+Bug-Debian: http://bugs.debian.org/617623
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- /dev/null
++++ dxflib-2.2.0.0/Makefile.am
+@@ -0,0 +1,28 @@
++BASE_DIR = ./src
++
++BASE_SRC = \
++		$(BASE_DIR)/dl_dxf.cpp \
++		$(BASE_DIR)/dl_writer_ascii.cpp
++
++BASE_INS = \
++		$(BASE_DIR)/dl_attributes.h \
++		$(BASE_DIR)/dl_codes.h \
++		$(BASE_DIR)/dl_creationadapter.h \
++		$(BASE_DIR)/dl_creationinterface.h \
++		$(BASE_DIR)/dl_dxf.h \
++		$(BASE_DIR)/dl_entities.h \
++		$(BASE_DIR)/dl_exception.h \
++		$(BASE_DIR)/dl_extrusion.h \
++		$(BASE_DIR)/dl_writer.h \
++		$(BASE_DIR)/dl_writer_ascii.h
++
++lib_LTLIBRARIES = libdxflib.la
++libdxflib_la_SOURCES = $(BASE_SRC)
++include_HEADERS = $(BASE_INS)
++libdxflib_la_LDFLAGS = -release @VERSION@
++
++testing:
++	(cd ./test ; make)
++
++docu:
++	-(doxygen ./doxygen.cfg)
+--- dxflib-2.2.0.0.orig/configure.in
++++ dxflib-2.2.0.0/configure.in
+@@ -2,7 +2,11 @@
+ #
+ # Check for one project file
+ #
+-AC_INIT(src/dl_dxf.cpp)
++AC_PREREQ([2.67])
++AC_INIT([dxflib], [2.2.0.0], [])
++AC_CONFIG_SRCDIR([src/dl_exception.h])
++AM_INIT_AUTOMAKE([-Wall -Werror foreign])
++AC_PROG_LIBTOOL
+ 
+ PRODUCT=dxflib
+ 
+--- dxflib-2.2.0.0.orig/src/dl_writer.h
++++ dxflib-2.2.0.0/src/dl_writer.h
+@@ -41,6 +41,7 @@
+ #endif
+ 
+ #include <iostream>
++#include <cstring>
+ 
+ #include "dl_attributes.h"
+ #include "dl_codes.h"
