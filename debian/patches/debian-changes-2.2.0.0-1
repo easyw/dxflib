@@ -3,7 +3,7 @@ Description: Upstream changes introduced in version 2.2.0.0-1
  Here's the last changelog entry, hopefully it gives details on why
  those changes were made:
  .
- dxflib (2.2.0.0-1) unstable; urgency=low
+ dxflib (2.2.0.0-1) UNRELEASED; urgency=low
  .
    * Initial release (Closes: #617623)
  .

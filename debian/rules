@@ -13,7 +13,7 @@
 	dh $@ --with autotools-dev --with autoreconf
 
 override_dh_strip:
-	dh_strip --dbg-package=libfparser-4.3-dbg
+	dh_strip --dbg-package=libdxflib-2.2.0.0-dbg
 
 get-orig-source:
 	uscan --download-current-version --repack --rename
