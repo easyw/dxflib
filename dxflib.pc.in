@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: dxflib
+Description: Library for reading dxf files
+Version: @PACKAGE_VERSION@
+Libs: -L${libdir} -ldxflib
+Cflags: -I${includedir}

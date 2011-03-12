@@ -24,9 +24,14 @@ Forwarded: <no|not-needed|url proving that it has been forwarded>
 Reviewed-By: <name and email of someone who approved the patch>
 Last-Update: <YYYY-MM-DD>
 
---- /dev/null
-+++ dxflib-2.2.0.0/Makefile.am
-@@ -0,0 +1,28 @@
+Index: dxflib/Makefile.am
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ dxflib/Makefile.am	2011-03-12 10:51:57.843889423 -0500
+@@ -0,0 +1,31 @@
++pkgconfigdir = $(libdir)/pkgconfig
++pkgconfig_DATA = dxflib.pc
++
 +BASE_DIR = ./src
 +
 +BASE_SRC = \
@@ -55,8 +60,10 @@ Last-Update: <YYYY-MM-DD>
 +
 +docu:
 +	-(doxygen ./doxygen.cfg)
---- dxflib-2.2.0.0.orig/configure.in
-+++ dxflib-2.2.0.0/configure.in
+Index: dxflib/configure.in
+===================================================================
+--- dxflib.orig/configure.in	2011-03-12 10:44:41.657998812 -0500
++++ dxflib/configure.in	2011-03-12 10:51:36.195549488 -0500
 @@ -2,7 +2,11 @@
  #
  # Check for one project file
@@ -70,8 +77,10 @@ Last-Update: <YYYY-MM-DD>
  
  PRODUCT=dxflib
  
---- dxflib-2.2.0.0.orig/src/dl_writer.h
-+++ dxflib-2.2.0.0/src/dl_writer.h
+Index: dxflib/src/dl_writer.h
+===================================================================
+--- dxflib.orig/src/dl_writer.h	2011-03-12 10:44:41.598001506 -0500
++++ dxflib/src/dl_writer.h	2011-03-12 10:51:36.195549488 -0500
 @@ -41,6 +41,7 @@
  #endif
  
