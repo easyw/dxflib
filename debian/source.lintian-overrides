@@ -1,0 +1,3 @@
+#both files are not used, used autotools-dev instead
+dxflib source: configure-generated-file-in-source config.status
+dxflib source: configure-generated-file-in-source config.log

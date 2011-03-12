@@ -1,0 +1,13 @@
+Description: Missing include needs to be added
+Author: Scott Howard <showard@debian.org>
+
+--- dxflib-2.2.0.0.orig/src/dl_writer.h
++++ dxflib-2.2.0.0/src/dl_writer.h
+@@ -41,6 +41,7 @@
+ #endif
+ 
+ #include <iostream>
++#include <cstring>
+ 
+ #include "dl_attributes.h"
+ #include "dl_codes.h"
