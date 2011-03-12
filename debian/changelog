@@ -1,5 +1,5 @@
-dxflib (2.2.0.0-1) UNRELEASED; urgency=low
+dxflib (2.2.0.0-1) unstable; urgency=low
 
   * Initial release (Closes: #617623)
 
- -- Scott Howard <showard@debian.org>  Thu, 10 Mar 2011 23:03:29 -0500
+ -- Scott Howard <showard@debian.org>  Sat, 12 Mar 2011 12:00:24 -0500
