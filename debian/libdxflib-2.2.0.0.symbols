@@ -2,11 +2,17 @@ libdxflib-2.2.0.0.so libdxflib-2.2.0.0 #MINVER#
  _ZN10DL_WriterA10strReplaceEPccc@Base 2.2.0.0
  _ZN10DL_WriterAD0Ev@Base 2.2.0.0
  _ZN10DL_WriterAD1Ev@Base 2.2.0.0
+ _ZN10DL_WriterAD2Ev@Base 2.2.0.0
  _ZN11DL_TextDataD1Ev@Base 2.2.0.0
+ _ZN11DL_TextDataD2Ev@Base 2.2.0.0
  _ZN12DL_MTextDataD1Ev@Base 2.2.0.0
+ _ZN12DL_MTextDataD2Ev@Base 2.2.0.0
  _ZN13DL_AttributesD1Ev@Base 2.2.0.0
+ _ZN13DL_AttributesD2Ev@Base 2.2.0.0
  _ZN15DL_ImageDefDataD1Ev@Base 2.2.0.0
+ _ZN15DL_ImageDefDataD2Ev@Base 2.2.0.0
  _ZN16DL_DimensionDataD1Ev@Base 2.2.0.0
+ _ZN16DL_DimensionDataD2Ev@Base 2.2.0.0
  _ZN6DL_Dxf10addCommentEP20DL_CreationInterfacePKc@Base 2.2.0.0
  _ZN6DL_Dxf10addEllipseEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf10addSettingEP20DL_CreationInterface@Base 2.2.0.0
@@ -115,6 +121,7 @@ libdxflib-2.2.0.0.so libdxflib-2.2.0.0 #MINVER#
  _ZN6DL_DxfD2Ev@Base 2.2.0.0
  _ZN9DL_WriterD0Ev@Base 2.2.0.0
  _ZN9DL_WriterD1Ev@Base 2.2.0.0
+ _ZN9DL_WriterD2Ev@Base 2.2.0.0
  _ZNK10DL_WriterA10openFailedEv@Base 2.2.0.0
  _ZNK10DL_WriterA5closeEv@Base 2.2.0.0
  _ZNK10DL_WriterA6dxfHexEii@Base 2.2.0.0

@@ -1,5 +1,5 @@
 Source: dxflib
-Priority: extra
+Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Scott Howard <showard@debian.org>
 DM-Upload-Allowed: yes
@@ -11,6 +11,7 @@ Vcs-Git: git://git.debian.org/debian-science/packages/dxflib.git
 Vcs-Browser: http://git.debian.org/?p=debian-science/packages/dxflib.git
 
 Package: libdxflib-dev
+Priority: extra
 Section: libdevel
 Architecture: any
 Depends: libdxflib-2.2.0.0 (= ${binary:Version}), ${misc:Depends}
@@ -23,7 +24,6 @@ Description: Development files for the dxflib library
  libdxflib.
 
 Package: libdxflib-2.2.0.0
-Priority: optional
 Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -33,6 +33,7 @@ Description: Library for reading and writing DXF files
  own C++ class for adding entities, layers, etc.
 
 Package: libdxflib-2.2.0.0-dbg
+Priority: extra
 Section: debug
 Architecture: any
 Depends: libdxflib-2.2.0.0 (= ${binary:Version}), ${misc:Depends}
