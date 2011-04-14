@@ -1,3 +1,9 @@
+dxflib (2.2.0.0-3) unstable; urgency=low
+
+  * Removed symbols files, FTBFS (arch-dep symbols)
+
+ -- Scott Howard <showard@debian.org>  Thu, 14 Apr 2011 09:08:15 -0400
+
 dxflib (2.2.0.0-2) unstable; urgency=low
 
   * Set source package priority: optional, no change to binary packages
