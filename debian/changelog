@@ -1,3 +1,9 @@
+dxflib (2.2.0.0-4) unstable; urgency=low
+
+  * Corrected debian/copyright to be GPLv2 and LGPLv2
+
+ -- Scott Howard <showard@debian.org>  Thu, 21 Apr 2011 23:11:41 -0400
+
 dxflib (2.2.0.0-3) unstable; urgency=low
 
   * Removed symbols files, FTBFS (arch-dep symbols)
