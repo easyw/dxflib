@@ -1,9 +1,11 @@
 Description: Build system for shared library.
 Author: Scott Howard <showard@debian.org>
 
---- /dev/null
-+++ dxflib-2.2.0.0/Makefile.am
-@@ -0,0 +1,31 @@
+Index: dxflib/Makefile.am
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ dxflib/Makefile.am	2011-06-19 13:12:27.730403356 -0400
+@@ -0,0 +1,32 @@
 +pkgconfigdir = $(libdir)/pkgconfig
 +pkgconfig_DATA = dxflib.pc
 +
@@ -27,7 +29,8 @@ Author: Scott Howard <showard@debian.org>
 +
 +lib_LTLIBRARIES = libdxflib.la
 +libdxflib_la_SOURCES = $(BASE_SRC)
-+include_HEADERS = $(BASE_INS)
++libdxflib_la_includedir=$(includedir)/dxflib
++libdxflib_la_include_HEADERS = $(BASE_INS)
 +libdxflib_la_LDFLAGS = -release @VERSION@
 +
 +testing:
@@ -35,21 +38,25 @@ Author: Scott Howard <showard@debian.org>
 +
 +docu:
 +	-(doxygen ./doxygen.cfg)
---- /dev/null
-+++ dxflib-2.2.0.0/dxflib.pc.in
+Index: dxflib/dxflib.pc.in
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ dxflib/dxflib.pc.in	2011-06-19 13:17:12.712300083 -0400
 @@ -0,0 +1,10 @@
 +prefix=@prefix@
 +exec_prefix=@exec_prefix@
 +libdir=@libdir@
-+includedir=@includedir@
++includedir=@includedir@/dxflib
 +
 +Name: dxflib
 +Description: Library for reading dxf files
 +Version: @PACKAGE_VERSION@
 +Libs: -L${libdir} -ldxflib
 +Cflags: -I${includedir}
---- dxflib-2.2.0.0.orig/configure.in
-+++ dxflib-2.2.0.0/configure.in
+Index: dxflib/configure.in
+===================================================================
+--- dxflib.orig/configure.in	2011-06-19 12:59:06.825498515 -0400
++++ dxflib/configure.in	2011-06-19 12:59:12.835085646 -0400
 @@ -2,7 +2,11 @@
  #
  # Check for one project file
@@ -63,7 +70,7 @@ Author: Scott Howard <showard@debian.org>
  
  PRODUCT=dxflib
  
-@@ -48,7 +52,7 @@ AC_CHECK_HEADERS(limits.h)
+@@ -48,7 +52,7 @@
  # finally create makefiles using Makefile.in
  #
  echo
