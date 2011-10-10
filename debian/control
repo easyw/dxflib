@@ -1,7 +1,8 @@
 Source: dxflib
 Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
-Uploaders: Scott Howard <showard@debian.org>
+Uploaders: Scott Howard <showard@debian.org>,
+  Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
 DM-Upload-Allowed: yes
 Build-Depends: debhelper (>= 8), dh-autoreconf, autotools-dev
 Standards-Version: 3.9.2

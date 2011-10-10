@@ -1,6 +1,6 @@
 dxflib (2.2.0.0-6) unstable; urgency=low
 
-
+  * Add myself to Uploaders.
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 10 Oct 2011 14:24:55 -0300
 
