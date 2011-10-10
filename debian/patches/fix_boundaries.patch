@@ -1,0 +1,37 @@
+Author: Rallaz <rallazz@gmail.com>
+Subject: fix boundaries issues.
+
+Fixes a boundary bug. Patch needed for LibreCAD.
+
+diff --git a/src/dl_dxf.cpp b/src/dl_dxf.cpp
+index 939fed2..b398acd 100644
+--- a/src/dl_dxf.cpp
++++ b/src/dl_dxf.cpp
+@@ -1358,6 +1358,7 @@ bool DL_Dxf::handleHatchData(DL_CreationInterface* /*creationInterface*/) {
+             hatchLoopIndex++;
+             hatchLoops[hatchLoopIndex]
+             = DL_HatchLoopData(toInt(groupValue));
++            hatchLoops[hatchLoopIndex].pathType = toInt(values[92]);
+ 
+             maxHatchEdges[hatchLoopIndex] = toInt(groupValue);
+             hatchEdgeIndex[hatchLoopIndex] = -1;
+@@ -1948,6 +1949,7 @@ void DL_Dxf::addHatch(DL_CreationInterface* creationInterface) {
+ 
+     for (int l=0; l<maxHatchLoops; l++) {
+         DL_HatchLoopData ld(maxHatchEdges[l]);
++        ld.pathType = hatchLoops[l].pathType;
+         creationInterface->addHatchLoop(ld);
+         for (int b=0; b<maxHatchEdges[l]; b++) {
+             creationInterface->addHatchEdge(hatchEdges[l][b]);
+diff --git a/src/dl_entities.h b/src/dl_entities.h
+index 39f7617..dfb47f0 100644
+--- a/src/dl_entities.h
++++ b/src/dl_entities.h
+@@ -1272,6 +1272,7 @@ struct DL_HatchLoopData {
+ 
+     /*! Number of edges in this loop. */
+     int numEdges;
++    int pathType; //Boundary path type
+ };
+ 
+ 
