@@ -1,9 +1,13 @@
-dxflib (2.2.0.0-7) UNRELEASED; urgency=low
+dxflib (2.2.0.0-7) unstable; urgency=low
 
+  [ Lisandro Damián Nicanor Pérez Meyer ]
   * Previous upload also included patch to solve a boundary bug
     needed by LibreCAD. Thanks Rallaz for the patch.
 
- -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 10 Oct 2011 15:53:48 -0300
+  [ Scott Howard ]
+  * Added symbols file, managed by pkgkde-symbolshelper
+
+ -- Scott Howard <showard@debian.org>  Sun, 05 Feb 2012 13:39:54 -0500
 
 dxflib (2.2.0.0-6) unstable; urgency=low
 
