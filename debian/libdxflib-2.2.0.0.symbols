@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 2.2.0.0 i386
+# SymbolsHelper-Confirmed: 2.2.0.0 armel armhf i386
 libdxflib-2.2.0.0.so libdxflib-2.2.0.0 #MINVER#
  _ZN10DL_WriterA10strReplaceEPccc@Base 2.2.0.0
  _ZN10DL_WriterAD0Ev@Base 2.2.0.0
@@ -119,6 +119,7 @@ libdxflib-2.2.0.0.so libdxflib-2.2.0.0 #MINVER#
  _ZNK10DL_WriterA7dxfRealEid@Base 2.2.0.0
  _ZNK10DL_WriterA9dxfStringEiPKc@Base 2.2.0.0
  _ZNK10DL_WriterA9dxfStringEiRKSs@Base 2.2.0.0
+ (arch=!i386)_ZNK9DL_Writer16entityAttributesERK13DL_Attributes@Base 2.2.0.0
  _ZTI10DL_WriterA@Base 2.2.0.0
  _ZTI9DL_Writer@Base 2.2.0.0
  _ZTS10DL_WriterA@Base 2.2.0.0
