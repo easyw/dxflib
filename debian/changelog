@@ -1,3 +1,9 @@
+dxflib (2.2.0.0-7~bpo60+1) squeeze-backports; urgency=low
+
+  * Backport to squeeze
+
+ -- Scott Howard <showard@debian.org>  Sun, 12 Feb 2012 10:49:38 -0500
+
 dxflib (2.2.0.0-7) unstable; urgency=low
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
