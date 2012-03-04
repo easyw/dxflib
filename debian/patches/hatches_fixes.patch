@@ -1,0 +1,87 @@
+Description: Fixes for hatch implimentaiton from LibreCAD project
+Author: Rallaz <rallaz@gmail.com>
+Index: dxflib/src/dl_entities.h
+===================================================================
+--- dxflib.orig/src/dl_entities.h	2012-03-03 21:00:30.349286383 -0500
++++ dxflib/src/dl_entities.h	2012-03-03 21:04:21.701291880 -0500
+@@ -45,12 +45,20 @@
+                  int lFlags) {
+         name = lName;
+         flags = lFlags;
++        plotF = true;
++    }
++    DL_LayerData(const string& lName,
++                 int lFlags,bool lPlotF) {
++        name = lName;
++        flags = lFlags;
++        plotF = lPlotF;//set help Layer, if plotF is false.
+     }
+ 
+     /** Layer name. */
+     string name;
+     /** Layer flags. (1 = frozen, 2 = frozen by default, 4 = locked) */
+     int flags;
++    bool plotF;
+ };
+ 
+ 
+@@ -1272,6 +1280,7 @@
+ 
+     /*! Number of edges in this loop. */
+     int numEdges;
++    int pathType; //Boundary path type
+ };
+ 
+ 
+Index: dxflib/src/dl_dxf.cpp
+===================================================================
+--- dxflib.orig/src/dl_dxf.cpp	2012-03-03 21:00:30.565286387 -0500
++++ dxflib/src/dl_dxf.cpp	2012-03-03 21:04:21.705291877 -0500
+@@ -816,8 +816,10 @@
+     }
+ 
+     // add layer
++    // 290 holds plotF flag, helpLayer holds (! plotF )
++//    std::cout<<"DL_Dxf::addLayer(): layer("<<values[2]<<"): toInt(values[290]) = "<<toInt(values[290])<<std::endl;
+     creationInterface->addLayer(DL_LayerData(values[2],
+-                                toInt(values[70])));
++                                toInt(values[70]),(toInt(values[290],1)!=0)));
+ }
+ 
+ 
+@@ -1358,6 +1360,7 @@
+             hatchLoopIndex++;
+             hatchLoops[hatchLoopIndex]
+             = DL_HatchLoopData(toInt(groupValue));
++            hatchLoops[hatchLoopIndex].pathType = toInt(values[92]);
+ 
+             maxHatchEdges[hatchLoopIndex] = toInt(groupValue);
+             hatchEdgeIndex[hatchLoopIndex] = -1;
+@@ -1948,6 +1951,7 @@
+ 
+     for (int l=0; l<maxHatchLoops; l++) {
+         DL_HatchLoopData ld(maxHatchEdges[l]);
++        ld.pathType = hatchLoops[l].pathType;
+         creationInterface->addHatchLoop(ld);
+         for (int b=0; b<maxHatchEdges[l]; b++) {
+             creationInterface->addHatchEdge(hatchEdges[l][b]);
+@@ -3312,13 +3316,17 @@
+ 
+     dw.dxfString(6, (attrib.getLineType().length()==0 ?
+                      string("CONTINUOUS") : attrib.getLineType()));
+-
++//std::cout<<"DL_Dxf::writeLayer(): layer("<<data.name<<")"<<std::endl;
+     if (version>=VER_2000) {
+         // layer defpoints cannot be plotted
+         std::string lstr = data.name;
+         std::transform(lstr.begin(), lstr.end(), lstr.begin(), tolower);
+-        if (lstr=="defpoints") {
++        if (lstr=="defpoints"|| ! data.plotF) {
++//            std::cout<<"DL_Dxf::writeLayer(): layer("<<data.name<<"): write(290)=0"<<std::endl;
+             dw.dxfInt(290, 0);
++        }else{
++//            std::cout<<"DL_Dxf::writeLayer(): layer("<<data.name<<"): write(290)=1"<<std::endl;
++            dw.dxfInt(290, 1);
+         }
+     }
+     if (version>=VER_2000 && attrib.getWidth()!=-1) {

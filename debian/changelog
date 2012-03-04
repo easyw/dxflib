@@ -1,3 +1,9 @@
+dxflib (2.2.0.0-8) unstable; urgency=low
+
+  * More hatch fixes in debian/patches/hatches_fixes.patch
+
+ -- Scott Howard <showard@debian.org>  Sat, 03 Mar 2012 21:25:22 -0500
+
 dxflib (2.2.0.0-7) unstable; urgency=low
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
