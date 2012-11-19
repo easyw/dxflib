@@ -3,14 +3,9 @@ Upstream-Name: dxflib
 Source: http://www.qcad.org/dxflib.html
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 
-Files: ./src/dl_attributes.h
- ./src/dl_creationadapter.h
- ./src/dl_creationinterface.h
- ./src/dl_dxf.cpp
- ./src/dl_dxf.h
- ./src/dl_entities.h
- ./src/dl_extrusion.h
-Copyright: 2001-2003, RibbonSoft.
+Files: ./src/*
+Copyright: 2001 Robert J. Campbell Jr
+           2001-2003 RibbonSoft.
 License: GPL-2.0
  This program is free software; you can redistribute it
  and/or modify it under the terms of the GNU General Public
@@ -31,15 +26,6 @@ License: GPL-2.0
  On Debian systems, the full text of the GNU General Public
  License version 2 can be found in the file
  `/usr/share/common-licenses/GPL-2'.
-
-Files: ./src/dl_codes.h
- ./src/dl_exception.h
- ./src/dl_writer.h
- ./src/dl_writer_ascii.cpp
- ./src/dl_writer_ascii.h
-Copyright: 2001, Robert J. Campbell Jr
-  2001-2003, RibbonSoft.
-License: GPL-2.0
 
 Files: ./test/main.cpp
  ./test/test_creationclass.cpp
