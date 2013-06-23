@@ -3,6 +3,8 @@ dxflib (2.5.0.0-1) experimental; urgency=low
   * New upstream release.
   * Dropped debian/patches/hatch_fix.patch:
     - patch from depending project that no longer uses dxflib
+  * Enable multi-arch, S-V 3.9.4, hardening flags
+  * Fix a FTBFS for missing AM_PROG_AR macro (Closes: #713303)
 
  -- Scott Howard <showard@debian.org>  Sun, 23 Jun 2013 17:16:54 -0400
 
