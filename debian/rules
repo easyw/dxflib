@@ -10,7 +10,12 @@
 #export DH_VERBOSE=1
 DEB_UPSTREAM_VERSION=$(shell dpkg-parsechangelog | sed -rne 's,^Version: ([^+]+).*-.*,\1,p')
 %:
+	mv configure.in configure.ac
 	dh $@ --with autoreconf
+	mv configure.ac configure.in
+
+override_dh_auto_test:
+	make testing
 
 override_dh_strip:
 	dh_strip --dbg-package=libdxflib-2.2.0.0-dbg

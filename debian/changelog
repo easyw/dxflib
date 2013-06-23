@@ -1,8 +1,10 @@
-dxflib (2.5.0.0-1) UNRELEASED; urgency=low
+dxflib (2.5.0.0-1) experimental; urgency=low
 
   * New upstream release.
+  * Dropped debian/patches/hatch_fix.patch:
+    - patch from depending project that no longer uses dxflib
 
- -- Scott Howard <showard@debian.org>  Sun, 23 Jun 2013 08:56:49 -0400
+ -- Scott Howard <showard@debian.org>  Sun, 23 Jun 2013 17:16:54 -0400
 
 dxflib (2.2.0.0-8) unstable; urgency=low
 

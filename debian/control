@@ -3,13 +3,12 @@ Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Scott Howard <showard@debian.org>,
   Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
-DM-Upload-Allowed: yes
-Build-Depends: debhelper (>= 8), dh-autoreconf, autotools-dev
-Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 9), dh-autoreconf, autotools-dev, libx11-dev
+Standards-Version: 3.9.4
 Section: libs
 Homepage: http://www.qcad.org/en/what-is-dxflib
-Vcs-Git: git://git.debian.org/debian-science/packages/dxflib.git
-Vcs-Browser: http://git.debian.org/?p=debian-science/packages/dxflib.git
+Vcs-Git: git://anonscm.debian.org/debian-science/packages/dxflib.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-science/packages/dxflib.git
 
 Package: libdxflib-dev
 Priority: extra
@@ -25,7 +24,6 @@ Description: Development files for the dxflib library
  libdxflib.
 
 Package: libdxflib-2.2.0.0
-Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Library for reading and writing DXF files

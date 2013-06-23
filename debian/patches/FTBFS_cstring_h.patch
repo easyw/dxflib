@@ -1,9 +1,11 @@
 Description: Missing include needs to be added
 Author: Scott Howard <showard@debian.org>
 
---- dxflib-2.2.0.0.orig/src/dl_writer.h
-+++ dxflib-2.2.0.0/src/dl_writer.h
-@@ -41,6 +41,7 @@
+Index: dxflib/src/dl_writer.h
+===================================================================
+--- dxflib.orig/src/dl_writer.h	2013-06-23 13:13:35.127629322 -0400
++++ dxflib/src/dl_writer.h	2013-06-23 13:13:35.119629321 -0400
+@@ -37,6 +37,7 @@
  #endif
  
  #include <iostream>
