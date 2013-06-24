@@ -14,7 +14,7 @@ Package: libdxflib-dev
 Priority: extra
 Section: libdevel
 Architecture: any
-Depends: libdxflib-2.2.0.0 (= ${binary:Version}), ${misc:Depends}
+Depends: libdxflib-2.5.0.0 (= ${binary:Version}), ${misc:Depends}
 Description: Development files for the dxflib library
  dxflib is a C++ library for reading and writing DXF files. When reading DXF
  files, dxflib parses the file and calls functions that you define in your
@@ -23,7 +23,7 @@ Description: Development files for the dxflib library
  This package contains the development files (headers and documentation) for
  libdxflib.
 
-Package: libdxflib-2.2.0.0
+Package: libdxflib-2.5.0.0
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Library for reading and writing DXF files
@@ -31,11 +31,11 @@ Description: Library for reading and writing DXF files
  files, dxflib parses the file and calls functions that you define in your
  own C++ class for adding entities, layers, etc.
 
-Package: libdxflib-2.2.0.0-dbg
+Package: libdxflib-2.5.0.0-dbg
 Priority: extra
 Section: debug
 Architecture: any
-Depends: libdxflib-2.2.0.0 (= ${binary:Version}), ${misc:Depends}
+Depends: libdxflib-2.5.0.0 (= ${binary:Version}), ${misc:Depends}
 Description: Debugging symbols for the dxflib library
  dxflib is a C++ library for reading and writing DXF files. When reading DXF
  files, dxflib parses the file and calls functions that you define in your

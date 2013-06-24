@@ -18,7 +18,7 @@ override_dh_auto_test:
 	make testing
 
 override_dh_strip:
-	dh_strip --dbg-package=libdxflib-2.2.0.0-dbg
+	dh_strip --dbg-package=libdxflib-$(DEB_UPSTREAM_VERSION)-dbg
 
 override_dh_makeshlibs:
 	dh_makeshlibs -- -c0 -v$(DEB_UPSTREAM_VERSION)
