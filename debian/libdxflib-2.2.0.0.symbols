@@ -1,9 +1,20 @@
-# SymbolsHelper-Confirmed: 2.2.0.0 armel armhf i386
+# SymbolsHelper-Confirmed: 2.5.0.0 i386
 libdxflib-2.2.0.0.so libdxflib-2.2.0.0 #MINVER#
  _ZN10DL_WriterA10strReplaceEPccc@Base 2.2.0.0
  _ZN10DL_WriterAD0Ev@Base 2.2.0.0
  _ZN10DL_WriterAD1Ev@Base 2.2.0.0
  _ZN10DL_WriterAD2Ev@Base 2.2.0.0
+ _ZN11DL_TextDataD1Ev@Base 2.5.0.0
+ _ZN11DL_TextDataD2Ev@Base 2.5.0.0
+ _ZN12DL_MTextDataD1Ev@Base 2.5.0.0
+ _ZN12DL_MTextDataD2Ev@Base 2.5.0.0
+ _ZN13DL_AttributesD1Ev@Base 2.5.0.0
+ _ZN13DL_AttributesD2Ev@Base 2.5.0.0
+ _ZN15DL_ImageDefDataD1Ev@Base 2.5.0.0
+ _ZN15DL_ImageDefDataD2Ev@Base 2.5.0.0
+ _ZN16DL_DimensionDataD1Ev@Base 2.5.0.0
+ _ZN16DL_DimensionDataD2Ev@Base 2.5.0.0
+ _ZN20DL_CreationInterface13setAttributesERK13DL_Attributes@Base 2.5.0.0
  _ZN6DL_Dxf10addCommentEP20DL_CreationInterfacePKc@Base 2.2.0.0
  _ZN6DL_Dxf10addEllipseEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf10addSettingEP20DL_CreationInterface@Base 2.2.0.0
@@ -79,7 +90,7 @@ libdxflib-2.2.0.0.so libdxflib-2.2.0.0 #MINVER#
  _ZN6DL_Dxf3outEPKcN8DL_Codes7versionE@Base 2.2.0.0
  _ZN6DL_Dxf4testEv@Base 2.2.0.0
  _ZN6DL_Dxf6addArcEP20DL_CreationInterface@Base 2.2.0.0
- _ZN6DL_Dxf6toRealEPKcd@Base 2.2.0.0
+#MISSING: 2.5.0.0# _ZN6DL_Dxf6toRealEPKcd@Base 2.2.0.0
  _ZN6DL_Dxf7addLineEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf7addTextEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf8addBlockEP20DL_CreationInterface@Base 2.2.0.0
@@ -119,7 +130,8 @@ libdxflib-2.2.0.0.so libdxflib-2.2.0.0 #MINVER#
  _ZNK10DL_WriterA7dxfRealEid@Base 2.2.0.0
  _ZNK10DL_WriterA9dxfStringEiPKc@Base 2.2.0.0
  _ZNK10DL_WriterA9dxfStringEiRKSs@Base 2.2.0.0
- (arch=!i386)_ZNK9DL_Writer16entityAttributesERK13DL_Attributes@Base 2.2.0.0
+ (arch=)_ZNK9DL_Writer16entityAttributesERK13DL_Attributes@Base 2.5.0.0
+ _ZNK9DL_Writer18tableLineTypeEntryEm@Base 2.5.0.0
  _ZTI10DL_WriterA@Base 2.2.0.0
  _ZTI9DL_Writer@Base 2.2.0.0
  _ZTS10DL_WriterA@Base 2.2.0.0
