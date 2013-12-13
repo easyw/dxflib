@@ -1,3 +1,9 @@
+dxflib (2.5.0.0-2) unstable; urgency=low
+
+  * Merge from experimental to unstable. (Closes: #731577)
+
+ -- Scott Howard <showard@debian.org>  Fri, 13 Dec 2013 16:41:48 -0500
+
 dxflib (2.5.0.0-1) experimental; urgency=low
 
   * New upstream release.
