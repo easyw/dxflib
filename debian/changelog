@@ -1,3 +1,9 @@
+dxflib (2.5.0.0-3) unstable; urgency=medium
+
+  * Adopt dxflib. Closes: #733823. 
+
+ -- Alastair McKinstry <mckinstry@debian.org>  Fri, 14 Aug 2015 17:31:11 +0100
+
 dxflib (2.5.0.0-2) unstable; urgency=low
 
   * Merge from experimental to unstable. (Closes: #731577)
