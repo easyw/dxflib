@@ -176,7 +176,7 @@ void testWriting() {
                        "CONTINUOUS"));
 
     dw->tableEnd();
-    dxf->writeStyle(*dw);
+    dxf->writeStyle(*dw, DL_StyleData("standard", 0, 2.5, 1.0, 0.0, 0, 2.5, "standard", ""));
     dxf->writeView(*dw);
     dxf->writeUcs(*dw);
 

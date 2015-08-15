@@ -1,5 +1,5 @@
 999
-dxflib 2.2.0.0
+dxflib 3.3.4.0
   0
 SECTION
   2
@@ -1081,31 +1081,21 @@ F
   0
 ENDTAB
   0
-TABLE
-  2
 STYLE
   5
-3
-100
-AcDbSymbolTable
- 70
-1
-  0
-STYLE
-  5
-11
+49
 100
 AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-Standard
+standard
  70
 0
  40
-0.0
+2.5
  41
-0.75
+1.0
  50
 0.0
  71
@@ -1113,11 +1103,15 @@ Standard
  42
 2.5
   3
-txt
+
   4
 
-  0
-ENDTAB
+1001
+ACAD
+1000
+standard
+1071
+0
   0
 TABLE
   2
@@ -1233,7 +1227,7 @@ Standard
 284
 8
 340
-11
+0
   0
 ENDTAB
   0
@@ -1285,7 +1279,7 @@ AcDbBlockTableRecord
   0
 BLOCK_RECORD
   5
-49
+4A
 100
 AcDbSymbolTableRecord
 100
@@ -1297,7 +1291,7 @@ myblock1
   0
 BLOCK_RECORD
   5
-4A
+4B
 100
 AcDbSymbolTableRecord
 100
@@ -1423,7 +1417,7 @@ AcDbBlockEnd
   0
 BLOCK
   5
-4B
+4C
 100
 AcDbEntity
   8
@@ -1447,7 +1441,7 @@ myblock1
   0
 ENDBLK
   5
-4C
+4D
 100
 AcDbEntity
   8
@@ -1457,7 +1451,7 @@ AcDbBlockEnd
   0
 BLOCK
   5
-4D
+4E
 100
 AcDbEntity
   8
@@ -1481,7 +1475,7 @@ myblock2
   0
 ENDBLK
   5
-4E
+4F
 100
 AcDbEntity
   8
@@ -1497,7 +1491,7 @@ ENTITIES
   0
 POINT
   5
-4F
+50
 100
 AcDbEntity
 100
@@ -1519,7 +1513,7 @@ BYLAYER
   0
 LINE
   5
-50
+51
 100
 AcDbEntity
 100
@@ -1583,7 +1577,7 @@ E
   3
 AcDbVariableDictionary
 350
-51
+52
   0
 DICTIONARY
   5
@@ -1699,7 +1693,7 @@ AcDbPlotSettings
   1
 
   2
-C:\Program Files\AutoCAD 2002\plotters\DWF ePlot (optimized for plotting).pc3
+none_device
   4
 
   6
@@ -1817,7 +1811,7 @@ AcDbPlotSettings
   1
 
   2
-C:\Program Files\AutoCAD 2002\plotters\DWF ePlot (optimized for plotting).pc3
+none_device
   4
 
   6
@@ -1935,7 +1929,7 @@ AcDbPlotSettings
   1
 
   2
-C:\Program Files\AutoCAD 2002\plotters\DWF ePlot (optimized for plotting).pc3
+none_device
   4
 
   6
@@ -2047,7 +2041,7 @@ Layout2
   0
 DICTIONARY
   5
-51
+52
 100
 AcDbDictionary
 281
@@ -2055,15 +2049,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-53
+54
   3
 HIDETEXT
 350
-52
+53
   0
 DICTIONARYVAR
   5
-52
+53
 100
 DictionaryVariables
 280
@@ -2073,7 +2067,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-53
+54
 100
 DictionaryVariables
 280
