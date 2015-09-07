@@ -1,20 +1,15 @@
-# SymbolsHelper-Confirmed: 2.5.0.0 alpha arm64 armel armhf hppa hurd-i386 i386 kfreebsd-amd64 kfreebsd-i386 m68k mips mips64el mipsel powerpc ppc64 ppc64el s390x sh4 sparc64 x32
-libdxflib-2.5.0.0.so libdxflib-2.5.0.0 #MINVER#
+# SymbolsHelper-Confirmed: 2.5.0.0-4~ amd64
+libdxflib-2.5.0.0.so libdxflib-2.5.0.0v5 #MINVER#
  _ZN10DL_WriterA10strReplaceEPccc@Base 2.2.0.0
  _ZN10DL_WriterAD0Ev@Base 2.2.0.0
  _ZN10DL_WriterAD1Ev@Base 2.2.0.0
  _ZN10DL_WriterAD2Ev@Base 2.2.0.0
  _ZN11DL_TextDataD1Ev@Base 2.5.0.0
  _ZN11DL_TextDataD2Ev@Base 2.5.0.0
- _ZN12DL_MTextDataD1Ev@Base 2.5.0.0
- _ZN12DL_MTextDataD2Ev@Base 2.5.0.0
  _ZN13DL_AttributesD1Ev@Base 2.5.0.0
  _ZN13DL_AttributesD2Ev@Base 2.5.0.0
- _ZN15DL_ImageDefDataD1Ev@Base 2.5.0.0
- _ZN15DL_ImageDefDataD2Ev@Base 2.5.0.0
  _ZN16DL_DimensionDataD1Ev@Base 2.5.0.0
  _ZN16DL_DimensionDataD2Ev@Base 2.5.0.0
- _ZN20DL_CreationInterface13setAttributesERK13DL_Attributes@Base 2.5.0.0
  _ZN6DL_Dxf10addCommentEP20DL_CreationInterfacePKc@Base 2.2.0.0
  _ZN6DL_Dxf10addEllipseEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf10addSettingEP20DL_CreationInterface@Base 2.2.0.0

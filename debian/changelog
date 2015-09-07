@@ -3,6 +3,9 @@ dxflib (2.5.0.0-4) unstable; urgency=medium
   * Team upload.
   * Remove myself from uploaders
   * Updated symbols
+  * Rename package for g++ transition (Closes: #797649)
+  * Updated copyright
+  * Bump Debian SV to 3.9.6, no changes
 
  -- Scott Howard <showard@debian.org>  Mon, 07 Sep 2015 12:30:34 -0400
 
