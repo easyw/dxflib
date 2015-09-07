@@ -2,7 +2,6 @@ Source: dxflib
 Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Alastair McKinstry <mckinstry@debian.org>,
-  Scott Howard <showard@debian.org>,
   Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
 Build-Depends: debhelper (>= 9), dh-autoreconf, autotools-dev, libx11-dev
 Standards-Version: 3.9.4
