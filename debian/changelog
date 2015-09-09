@@ -1,9 +1,13 @@
-dxflib (3.7.5-1) UNRELEASED; urgency=medium
+dxflib (2.5.0.0-4) unstable; urgency=medium
 
-  * New upstream release. 
-  * Standards-Version: 3.9.6.
+  * Team upload.
+  * Remove myself from uploaders
+  * Updated symbols
+  * Rename package for g++ transition (Closes: #797649)
+  * Updated copyright
+  * Bump Debian SV to 3.9.6, no changes
 
- -- Alastair McKinstry <mckinstry@debian.org>  Sat, 15 Aug 2015 17:50:08 +0100
+ -- Scott Howard <showard@debian.org>  Mon, 07 Sep 2015 12:30:34 -0400
 
 dxflib (2.5.0.0-3) unstable; urgency=medium
 

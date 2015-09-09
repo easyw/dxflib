@@ -2,7 +2,6 @@ Source: dxflib
 Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Alastair McKinstry <mckinstry@debian.org>,
-  Scott Howard <showard@debian.org>,
   Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
 Build-Depends: debhelper (>= 9), dh-autoreconf, autotools-dev, libx11-dev
 Standards-Version: 3.9.6
@@ -15,7 +14,7 @@ Package: libdxflib-dev
 Priority: extra
 Section: libdevel
 Architecture: any
-Depends: libdxflib-2.5.0.0 (= ${binary:Version}), ${misc:Depends}
+Depends: libdxflib-2.5.0.0v5 (= ${binary:Version}), ${misc:Depends}
 Description: Development files for the dxflib library
  dxflib is a C++ library for reading and writing DXF files. When reading DXF
  files, dxflib parses the file and calls functions that you define in your
@@ -24,19 +23,21 @@ Description: Development files for the dxflib library
  This package contains the development files (headers and documentation) for
  libdxflib.
 
-Package: libdxflib-2.5.0.0
+Package: libdxflib-2.5.0.0v5
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Breaks: libdxflib-2.5.0.0
+Replaces: libdxflib-2.5.0.0
 Description: Library for reading and writing DXF files
  dxflib is a C++ library for reading and writing DXF files. When reading DXF
  files, dxflib parses the file and calls functions that you define in your
  own C++ class for adding entities, layers, etc.
 
-Package: libdxflib-2.5.0.0-dbg
+Package: libdxflib-2.5.0.0v5-dbg
 Priority: extra
 Section: debug
 Architecture: any
-Depends: libdxflib-2.5.0.0 (= ${binary:Version}), ${misc:Depends}
+Depends: libdxflib-2.5.0.0v5 (= ${binary:Version}), ${misc:Depends}
 Description: Debugging symbols for the dxflib library
  dxflib is a C++ library for reading and writing DXF files. When reading DXF
  files, dxflib parses the file and calls functions that you define in your

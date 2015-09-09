@@ -1,25 +1,21 @@
-# SymbolsHelper-Confirmed: 2.5.0.0 i386
-libdxflib-2.5.0.0.so libdxflib-2.5.0.0 #MINVER#
+# SymbolsHelper-Confirmed: 2.5.0.0-4~ amd64
+libdxflib-2.5.0.0.so libdxflib-2.5.0.0v5 #MINVER#
  _ZN10DL_WriterA10strReplaceEPccc@Base 2.2.0.0
  _ZN10DL_WriterAD0Ev@Base 2.2.0.0
  _ZN10DL_WriterAD1Ev@Base 2.2.0.0
  _ZN10DL_WriterAD2Ev@Base 2.2.0.0
  _ZN11DL_TextDataD1Ev@Base 2.5.0.0
  _ZN11DL_TextDataD2Ev@Base 2.5.0.0
- _ZN12DL_MTextDataD1Ev@Base 2.5.0.0
- _ZN12DL_MTextDataD2Ev@Base 2.5.0.0
  _ZN13DL_AttributesD1Ev@Base 2.5.0.0
  _ZN13DL_AttributesD2Ev@Base 2.5.0.0
- _ZN15DL_ImageDefDataD1Ev@Base 2.5.0.0
- _ZN15DL_ImageDefDataD2Ev@Base 2.5.0.0
  _ZN16DL_DimensionDataD1Ev@Base 2.5.0.0
  _ZN16DL_DimensionDataD2Ev@Base 2.5.0.0
- _ZN20DL_CreationInterface13setAttributesERK13DL_Attributes@Base 2.5.0.0
  _ZN6DL_Dxf10addCommentEP20DL_CreationInterfacePKc@Base 2.2.0.0
  _ZN6DL_Dxf10addEllipseEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf10addSettingEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf10getDimDataEv@Base 2.2.0.0
- _ZN6DL_Dxf10writeAppidER10DL_WriterARKSs@Base 2.2.0.0
+ (arch=!sh4 !sparc64)_ZN6DL_Dxf10writeAppidER10DL_WriterARKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 2.5.0.0
+ (arch=sh4 sparc64)_ZN6DL_Dxf10writeAppidER10DL_WriterARKSs@Base 2.5.0.0
  _ZN6DL_Dxf10writeBlockER10DL_WriterARK12DL_BlockData@Base 2.2.0.0
  _ZN6DL_Dxf10writeImageER10DL_WriterARK12DL_ImageDataRK13DL_Attributes@Base 2.2.0.0
  _ZN6DL_Dxf10writeLayerER10DL_WriterARK12DL_LayerDataRK13DL_Attributes@Base 2.2.0.0
@@ -43,7 +39,8 @@ libdxflib-2.5.0.0.so libdxflib-2.5.0.0 #MINVER#
  _ZN6DL_Dxf11writeVertexER10DL_WriterARK13DL_VertexData@Base 2.2.0.0
  _ZN6DL_Dxf12addDimLinearEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf12addDimRadialEP20DL_CreationInterface@Base 2.2.0.0
- _ZN6DL_Dxf12writeCommentER10DL_WriterARKSs@Base 2.2.0.0
+ (arch=!sh4 !sparc64)_ZN6DL_Dxf12writeCommentER10DL_WriterARKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 2.5.0.0
+ (arch=sh4 sparc64)_ZN6DL_Dxf12writeCommentER10DL_WriterARKSs@Base 2.5.0.0
  _ZN6DL_Dxf12writeEllipseER10DL_WriterARK14DL_EllipseDataRK13DL_Attributes@Base 2.2.0.0
  _ZN6DL_Dxf12writeObjectsER10DL_WriterA@Base 2.2.0.0
  _ZN6DL_Dxf13addDimAlignedEP20DL_CreationInterface@Base 2.2.0.0
@@ -51,15 +48,18 @@ libdxflib-2.5.0.0.so libdxflib-2.5.0.0 #MINVER#
  _ZN6DL_Dxf13checkVariableEPKcN8DL_Codes7versionE@Base 2.2.0.0
  _ZN6DL_Dxf13getLibVersionEPKc@Base 2.2.0.0
  _ZN6DL_Dxf13readDxfGroupsEP8_IO_FILEP20DL_CreationInterfacePi@Base 2.2.0.0
- _ZN6DL_Dxf13readDxfGroupsERSt18basic_stringstreamIcSt11char_traitsIcESaIcEEP20DL_CreationInterfacePi@Base 2.2.0.0
+ (arch=!sh4 !sparc64)_ZN6DL_Dxf13readDxfGroupsERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEP20DL_CreationInterfacePi@Base 2.5.0.0
+ (arch=sh4 sparc64)_ZN6DL_Dxf13readDxfGroupsERSt18basic_stringstreamIcSt11char_traitsIcESaIcEEP20DL_CreationInterfacePi@Base 2.5.0.0
  _ZN6DL_Dxf13writeDimStyleER10DL_WriterAddddd@Base 2.2.0.0
- _ZN6DL_Dxf13writeEndBlockER10DL_WriterARKSs@Base 2.2.0.0
+ (arch=!sh4 !sparc64)_ZN6DL_Dxf13writeEndBlockER10DL_WriterARKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 2.5.0.0
+ (arch=sh4 sparc64)_ZN6DL_Dxf13writeEndBlockER10DL_WriterARKSs@Base 2.5.0.0
  _ZN6DL_Dxf13writeImageDefER10DL_WriterAiRK12DL_ImageData@Base 2.2.0.0
  _ZN6DL_Dxf13writeLineTypeER10DL_WriterARK15DL_LineTypeData@Base 2.2.0.0
  _ZN6DL_Dxf13writePolylineER10DL_WriterARK15DL_PolylineDataRK13DL_Attributes@Base 2.2.0.0
  _ZN6DL_Dxf14addDimOrdinateEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf14getChoppedLineEPcjP8_IO_FILE@Base 2.2.0.0
- _ZN6DL_Dxf14getChoppedLineEPcjRSt18basic_stringstreamIcSt11char_traitsIcESaIcEE@Base 2.2.0.0
+ (arch=!sh4 !sparc64)_ZN6DL_Dxf14getChoppedLineEPcjRNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE@Base 2.5.0.0
+ (arch=sh4 sparc64)_ZN6DL_Dxf14getChoppedLineEPcjRSt18basic_stringstreamIcSt11char_traitsIcESaIcEE@Base 2.5.0.0
  _ZN6DL_Dxf14writeDimLinearER10DL_WriterARK16DL_DimensionDataRK16DL_DimLinearDataRK13DL_Attributes@Base 2.2.0.0
  _ZN6DL_Dxf14writeDimRadialER10DL_WriterARK16DL_DimensionDataRK16DL_DimRadialDataRK13DL_Attributes@Base 2.2.0.0
  _ZN6DL_Dxf14writeHatchEdgeER10DL_WriterARK16DL_HatchEdgeData@Base 2.2.0.0
@@ -77,7 +77,8 @@ libdxflib-2.5.0.0.so libdxflib-2.5.0.0 #MINVER#
  _ZN6DL_Dxf16handleLeaderDataEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf16handleSplineDataEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf16writeBlockRecordER10DL_WriterA@Base 2.2.0.0
- _ZN6DL_Dxf16writeBlockRecordER10DL_WriterARKSs@Base 2.2.0.0
+ (arch=!sh4 !sparc64)_ZN6DL_Dxf16writeBlockRecordER10DL_WriterARKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 2.5.0.0
+ (arch=sh4 sparc64)_ZN6DL_Dxf16writeBlockRecordER10DL_WriterARKSs@Base 2.5.0.0
  _ZN6DL_Dxf16writeDimOrdinateER10DL_WriterARK16DL_DimensionDataRK18DL_DimOrdinateDataRK13DL_Attributes@Base 2.2.0.0
  _ZN6DL_Dxf16writePolylineEndER10DL_WriterA@Base 2.2.0.0
  _ZN6DL_Dxf17writeControlPointER10DL_WriterARK19DL_ControlPointData@Base 2.2.0.0
@@ -85,11 +86,14 @@ libdxflib-2.5.0.0.so libdxflib-2.5.0.0 #MINVER#
  _ZN6DL_Dxf17writeDimDiametricER10DL_WriterARK16DL_DimensionDataRK19DL_DimDiametricDataRK13DL_Attributes@Base 2.2.0.0
  _ZN6DL_Dxf17writeLeaderVertexER10DL_WriterARK19DL_LeaderVertexData@Base 2.2.0.0
  _ZN6DL_Dxf20handleLWPolylineDataEP20DL_CreationInterface@Base 2.2.0.0
- _ZN6DL_Dxf2inERKSsP20DL_CreationInterface@Base 2.2.0.0
- _ZN6DL_Dxf2inERSt18basic_stringstreamIcSt11char_traitsIcESaIcEEP20DL_CreationInterface@Base 2.2.0.0
+ (arch=!sh4 !sparc64)_ZN6DL_Dxf2inERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEP20DL_CreationInterface@Base 2.5.0.0
+ (arch=sh4 sparc64)_ZN6DL_Dxf2inERKSsP20DL_CreationInterface@Base 2.5.0.0
+ (arch=!sh4 !sparc64)_ZN6DL_Dxf2inERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEEP20DL_CreationInterface@Base 2.5.0.0
+ (arch=sh4 sparc64)_ZN6DL_Dxf2inERSt18basic_stringstreamIcSt11char_traitsIcESaIcEEP20DL_CreationInterface@Base 2.5.0.0
  _ZN6DL_Dxf3outEPKcN8DL_Codes7versionE@Base 2.2.0.0
  _ZN6DL_Dxf4testEv@Base 2.2.0.0
  _ZN6DL_Dxf6addArcEP20DL_CreationInterface@Base 2.2.0.0
+ (arch=!sh4 !sparc64)_ZN6DL_Dxf6toRealEPKcd@Base 2.5.0.0
  _ZN6DL_Dxf7addLineEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf7addTextEP20DL_CreationInterface@Base 2.2.0.0
  _ZN6DL_Dxf8addBlockEP20DL_CreationInterface@Base 2.2.0.0
@@ -119,21 +123,21 @@ libdxflib-2.5.0.0.so libdxflib-2.5.0.0 #MINVER#
  _ZN6DL_DxfC2Ev@Base 2.2.0.0
  _ZN6DL_DxfD1Ev@Base 2.2.0.0
  _ZN6DL_DxfD2Ev@Base 2.2.0.0
- _ZN9DL_WriterD0Ev@Base 2.2.0.0
- _ZN9DL_WriterD1Ev@Base 2.2.0.0
- _ZN9DL_WriterD2Ev@Base 2.2.0.0
  _ZNK10DL_WriterA10openFailedEv@Base 2.2.0.0
  _ZNK10DL_WriterA5closeEv@Base 2.2.0.0
  _ZNK10DL_WriterA6dxfHexEii@Base 2.2.0.0
  _ZNK10DL_WriterA6dxfIntEii@Base 2.2.0.0
  _ZNK10DL_WriterA7dxfRealEid@Base 2.2.0.0
  _ZNK10DL_WriterA9dxfStringEiPKc@Base 2.2.0.0
- _ZNK10DL_WriterA9dxfStringEiRKSs@Base 2.2.0.0
+ (arch=!sh4 !sparc64)_ZNK10DL_WriterA9dxfStringEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE@Base 2.5.0.0
+ (arch=sh4 sparc64)_ZNK10DL_WriterA9dxfStringEiRKSs@Base 2.5.0.0
  _ZNK9DL_Writer16entityAttributesERK13DL_Attributes@Base 2.5.0.0
  _ZNK9DL_Writer18tableLineTypeEntryEm@Base 2.5.0.0
+ (arch=!sh4 !sparc64)_ZNK9DL_Writer6entityEPKc@Base 2.5.0.0
+ (optional=templinst)_ZNKSt5ctypeIcE8do_widenEc@Base 2.5.0.0
  _ZTI10DL_WriterA@Base 2.2.0.0
  _ZTI9DL_Writer@Base 2.2.0.0
  _ZTS10DL_WriterA@Base 2.2.0.0
  _ZTS9DL_Writer@Base 2.2.0.0
  _ZTV10DL_WriterA@Base 2.2.0.0
- _ZTV9DL_Writer@Base 2.2.0.0
+ (arch=sh4 sparc64)_ZTV9DL_Writer@Base 2.5.0.0
