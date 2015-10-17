@@ -1,3 +1,9 @@
+dxflib (3.7.5-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Alastair McKinstry <mckinstry@debian.org>  Sat, 17 Oct 2015 03:27:03 +0100
+
 dxflib (2.5.0.0-4) unstable; urgency=medium
 
   * Team upload.
