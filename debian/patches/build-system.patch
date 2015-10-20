@@ -1,10 +1,10 @@
 Description: Build system for shared library.
 Author: Scott Howard <showard@debian.org>
 
-Index: dxflib/Makefile.am
+Index: dxflib-3.7.5/Makefile.am
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ dxflib/Makefile.am	2013-12-13 16:32:42.560922659 -0500
+--- /dev/null
++++ dxflib-3.7.5/Makefile.am
 @@ -0,0 +1,32 @@
 +pkgconfigdir = $(libdir)/pkgconfig
 +pkgconfig_DATA = dxflib.pc
@@ -38,10 +38,10 @@ Index: dxflib/Makefile.am
 +
 +docu:
 +	-(doxygen ./doxygen.cfg)
-Index: dxflib/dxflib.pc.in
+Index: dxflib-3.7.5/dxflib.pc.in
 ===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ dxflib/dxflib.pc.in	2013-12-13 16:32:42.560922659 -0500
+--- /dev/null
++++ dxflib-3.7.5/dxflib.pc.in
 @@ -0,0 +1,10 @@
 +prefix=@prefix@
 +exec_prefix=@exec_prefix@
@@ -53,56 +53,3 @@ Index: dxflib/dxflib.pc.in
 +Version: @PACKAGE_VERSION@
 +Libs: -L${libdir} -ldxflib
 +Cflags: -I${includedir}
-Index: dxflib/configure.in
-===================================================================
---- dxflib.orig/configure.in	2013-12-13 16:32:42.568922659 -0500
-+++ dxflib/configure.in	2013-12-13 16:33:02.000923121 -0500
-@@ -2,7 +2,12 @@
- #
- # Check for one project file
- #
--AC_INIT(src/dl_dxf.cpp)
-+AC_PREREQ([2.67])
-+AC_INIT([dxflib], [2.5.0.0], [])
-+AC_CONFIG_SRCDIR([src/dl_exception.h])
-+AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
-+m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
-+AC_PROG_LIBTOOL
- 
- PRODUCT=dxflib
- 
-@@ -48,7 +53,7 @@
- # finally create makefiles using Makefile.in
- #
- echo
--AC_OUTPUT(Makefile test/Makefile)
-+AC_OUTPUT(Makefile test/Makefile dxflib.pc)
- 
- echo
- echo "Run 'make depend' to create dependencies."
-Index: dxflib/test/Makefile
-===================================================================
---- dxflib.orig/test/Makefile	2013-12-13 16:32:42.568922659 -0500
-+++ dxflib/test/Makefile	2013-12-13 16:32:42.560922659 -0500
-@@ -5,7 +5,7 @@
- 
- OBJF =		main.o \
-             test_creationclass.o
--EXTERN_LIBS = -L../lib -ldxflib -L/usr/X11R6/lib -lX11
-+EXTERN_LIBS = -L../libs -ldxflib -L/usr/X11R6/lib -lX11
- INCLUDES = -I../src
- 
- all: main
-Index: dxflib/test/Makefile.in
-===================================================================
---- dxflib.orig/test/Makefile.in	2013-12-13 16:32:42.568922659 -0500
-+++ dxflib/test/Makefile.in	2013-12-13 16:32:42.560922659 -0500
-@@ -5,7 +5,7 @@
- 
- OBJF =		main.o \
-             test_creationclass.o
--EXTERN_LIBS = -L../lib -ldxflib -L/usr/X11R6/lib -lX11
-+EXTERN_LIBS = -L../.libs -ldxflib -L/usr/X11R6/lib -lX11
- INCLUDES = -I../src
- 
- all: main

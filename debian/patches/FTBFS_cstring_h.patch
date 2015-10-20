@@ -1,15 +1,15 @@
 Description: Missing include needs to be added
 Author: Scott Howard <showard@debian.org>
 
-Index: dxflib/src/dl_writer.h
+Index: dxflib-3.7.5/src/dl_writer.h
 ===================================================================
---- dxflib.orig/src/dl_writer.h	2013-06-23 13:13:35.127629322 -0400
-+++ dxflib/src/dl_writer.h	2013-06-23 13:13:35.119629321 -0400
+--- dxflib-3.7.5.orig/src/dl_writer.h
++++ dxflib-3.7.5/src/dl_writer.h
 @@ -37,6 +37,7 @@
- #endif
+ #endif // _MSC_VER > 1000
  
  #include <iostream>
 +#include <cstring>
+ #include <algorithm>
  
  #include "dl_attributes.h"
- #include "dl_codes.h"
