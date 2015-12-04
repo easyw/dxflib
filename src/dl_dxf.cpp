@@ -176,7 +176,7 @@ bool DL_Dxf::readDxfGroups(FILE *fp, DL_CreationInterface* creationInterface) {
 
     // Read one group of the DXF file and strip the lines:
     if (DL_Dxf::getStrippedLine(groupCodeTmp, DL_DXF_MAXLINE, fp) &&
-            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, fp) ) {
+            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, fp, false) ) {
 
         groupCode = (unsigned int)toInt(groupCodeTmp);
 
@@ -200,7 +200,7 @@ bool DL_Dxf::readDxfGroups(std::stringstream& stream,
 
     // Read one group of the DXF file and chop the lines:
     if (DL_Dxf::getStrippedLine(groupCodeTmp, DL_DXF_MAXLINE, stream) &&
-            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, stream) ) {
+            DL_Dxf::getStrippedLine(groupValue, DL_DXF_MAXLINE, stream, false) ) {
 
         groupCode = (unsigned int)toInt(groupCodeTmp);
 
@@ -229,7 +229,7 @@ bool DL_Dxf::readDxfGroups(std::stringstream& stream,
  * @todo Is it a problem if line is blank (i.e., newline only)?
  *      Then, when function returns, (s==NULL).
  */
-bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp) {
+bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp, bool stripSpace) {
     if (!feof(fp)) {
         // The whole line in the file.  Includes space for NULL.
         char* wholeLine = new char[size];
@@ -243,7 +243,7 @@ bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp) {
             // Both guaranteed to be NULL terminated.
 
             // Strip leading whitespace and trailing CR/LF.
-            stripWhiteSpace(&line);
+            stripWhiteSpace(&line, stripSpace);
 
             s = line;
             assert(size > s.length());
@@ -264,14 +264,14 @@ bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp) {
  * Same as above but for stringstreams.
  */
 bool DL_Dxf::getStrippedLine(std::string &s, unsigned int size,
-                            std::stringstream& stream) {
+                            std::stringstream& stream, bool stripSpace) {
 
     if (!stream.eof()) {
         // Only the useful part of the line
         char* line = new char[size+1];
         char* oriLine = line;
         stream.getline(line, size);
-        stripWhiteSpace(&line);
+        stripWhiteSpace(&line, stripSpace);
         s = line;
         assert(size > s.length());
         delete[] oriLine;
@@ -294,21 +294,23 @@ bool DL_Dxf::getStrippedLine(std::string &s, unsigned int size,
  * @retval true if \p s is non-NULL
  * @retval false if \p s is NULL
  */
-bool DL_Dxf::stripWhiteSpace(char** s) {
+bool DL_Dxf::stripWhiteSpace(char** s, bool stripSpace) {
     // last non-NULL char:
     int lastChar = strlen(*s) - 1;
 
     // Is last character CR or LF?
     while ( (lastChar >= 0) &&
             (((*s)[lastChar] == 10) || ((*s)[lastChar] == 13) ||
-             ((*s)[lastChar] == ' ' || ((*s)[lastChar] == '\t'))) ) {
+             (stripSpace && ((*s)[lastChar] == ' ' || ((*s)[lastChar] == '\t')))) ) {
         (*s)[lastChar] = '\0';
         lastChar--;
     }
 
     // Skip whitespace, excluding \n, at beginning of line
-    while ((*s)[0]==' ' || (*s)[0]=='\t') {
-        ++(*s);
+    if (stripSpace) {
+        while ((*s)[0]==' ' || (*s)[0]=='\t') {
+            ++(*s);
+        }
     }
     
     return ((*s) ? true : false);
@@ -1622,9 +1624,9 @@ void DL_Dxf::addText(DL_CreationInterface* creationInterface) {
         getRealValue(20, 0.0),
         getRealValue(30, 0.0),
         // alignment point
-        getRealValue(11, 0.0),
-        getRealValue(21, 0.0),
-        getRealValue(31, 0.0),
+        getRealValue(11, DL_NANDOUBLE),
+        getRealValue(21, DL_NANDOUBLE),
+        getRealValue(31, DL_NANDOUBLE),
         // height
         getRealValue(40, 2.5),
         // x scale
@@ -2303,6 +2305,9 @@ void DL_Dxf::writeHeader(DL_WriterA& dw) {
     case DL_Codes::AC1015:
         dw.dxfString(1, "AC1015");
         break;
+    case DL_Codes::AC1009_MIN:
+        // minimalistic DXF version is unidentified in file:
+        break;
     }
 
     // Newer version require that (otherwise a*cad crashes..)
@@ -2724,7 +2729,12 @@ void DL_Dxf::writeInsert(DL_WriterA& dw,
     dw.entity("INSERT");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbBlockReference");
+        if (data.cols!=1 || data.rows!=1) {
+            dw.dxfString(100, "AcDbMInsertBlock");
+        }
+        else {
+            dw.dxfString(100, "AcDbBlockReference");
+        }
     }
     dw.entityAttributes(attrib);
     dw.dxfString(2, data.name);
@@ -2747,7 +2757,6 @@ void DL_Dxf::writeInsert(DL_WriterA& dw,
         dw.dxfReal(44, data.colSp);
         dw.dxfReal(45, data.rowSp);
     }
-
 }
 
 
@@ -2884,7 +2893,9 @@ void DL_Dxf::writeDimStyleOverrides(DL_WriterA& dw,
         dw.dxfString(1000, "DSTYLE");
         dw.dxfString(1002, "{");
         dw.dxfInt(1070, 144);
-        dw.dxfInt(1040, data.linearFactor);
+        dw.dxfReal(1040, data.linearFactor);
+        dw.dxfInt(1070,40);
+        dw.dxfReal(1040, data.dimScale);
         dw.dxfString(1002, "}");
     }
 }
