@@ -1,5 +1,5 @@
 Author: Alastair McKinstry <mckinstry@debian.org>
-Description: Re-include configure.in missing from 2.12.2
+Description: Re-include configure.in missing from 3.12.2
 Forwarded: no
 Last-Updated: 2016-01-04
 
@@ -13,7 +13,7 @@ Index: dxflib-3.12.2/configure.in
 +# Check for one project file
 +#
 +AC_PREREQ([2.67])
-+AC_INIT([dxflib], [2.12.2], [])
++AC_INIT([dxflib], [3.12.2], [])
 +AC_CONFIG_SRCDIR([src/dl_exception.h])
 +AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 +m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
