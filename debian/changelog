@@ -1,7 +1,8 @@
 dxflib (3.12.2-1) UNRELEASED; urgency=medium
 
-  * New upstream release. Move 2.5.0.0 -> 3.0 and rename packages.
+  * New upstream release. Move 2.5.0.0 -> 3 and rename packages.
   * Remove explicit dbg package. Now done automatically.
+  * Remove lisandro from Uploaders:
 
  -- Alastair McKinstry <mckinstry@debian.org>  Tue, 20 Oct 2015 19:13:16 +0100
 
