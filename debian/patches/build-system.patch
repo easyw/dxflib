@@ -5,7 +5,7 @@ Index: dxflib-3.7.5/Makefile.am
 ===================================================================
 --- /dev/null
 +++ dxflib-3.7.5/Makefile.am
-@@ -0,0 +1,32 @@
+@@ -0,0 +1,33 @@
 +pkgconfigdir = $(libdir)/pkgconfig
 +pkgconfig_DATA = dxflib.pc
 +
@@ -24,6 +24,7 @@ Index: dxflib-3.7.5/Makefile.am
 +		$(BASE_DIR)/dl_entities.h \
 +		$(BASE_DIR)/dl_exception.h \
 +		$(BASE_DIR)/dl_extrusion.h \
++		$(BASE_DIR)/dl_global.h \
 +		$(BASE_DIR)/dl_writer.h \
 +		$(BASE_DIR)/dl_writer_ascii.h
 +
