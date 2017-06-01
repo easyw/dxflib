@@ -1,5 +1,6 @@
-dxflib (3.12.2-2) UNRELEASED; urgency=medium
+dxflib (3.17.0-1) UNRELEASED; urgency=medium
 
+  * New upstream release
   * Update debian/copyright: test/* removed; GPL2+ files in debian/*
   * Standards-Version: 3.9.8. No changes required.
   * DH_COMPAT=10
