@@ -6,8 +6,8 @@ Build-Depends: debhelper (>= 9), dh-autoreconf, autotools-dev, libx11-dev
 Standards-Version: 3.9.7
 Section: libs
 Homepage: http://www.qcad.org/en/what-is-dxflib
-Vcs-Git: git://anonscm.debian.org/debian-science/packages/dxflib.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-science/packages/dxflib.git
+Vcs-Git: https://anonscm.debian.org/git/debian-science/packages/dxflib.git
+Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/dxflib.git
 
 Package: libdxflib-dev
 Priority: extra
