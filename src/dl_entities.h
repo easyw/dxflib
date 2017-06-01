@@ -38,16 +38,17 @@ struct DXFLIB_EXPORT DL_LayerData {
      * Constructor.
      * Parameters: see member variables.
      */
-    DL_LayerData(const std::string& lName,
-                 int lFlags) {
-        name = lName;
-        flags = lFlags;
+    DL_LayerData(const std::string& name,
+                 int flags, bool off = false) :
+        name(name), flags(flags), off(off) {
     }
 
     /** Layer name. */
     std::string name;
     /** Layer flags. (1 = frozen, 2 = frozen by default, 4 = locked) */
     int flags;
+    /** Layer is off */
+    bool off;
 };
 
 
@@ -383,10 +384,11 @@ struct DXFLIB_EXPORT DL_PolylineData {
      * Constructor.
      * Parameters: see member variables.
      */
-    DL_PolylineData(int pNumber, int pMVerteces, int pNVerteces, int pFlags) {
+    DL_PolylineData(int pNumber, int pMVerteces, int pNVerteces, int pFlags, double pElevation = 0.0) {
         number = pNumber;
         m = pMVerteces;
         n = pNVerteces;
+        elevation = pElevation;
         flags = pFlags;
     }
 
@@ -398,6 +400,9 @@ struct DXFLIB_EXPORT DL_PolylineData {
 
     /*! Number of vertices in n direction if polyline is a polygon mesh. */
     unsigned int n;
+
+    /*! elevation of the polyline. */
+    double elevation;
 
     /*! Flags */
     int flags;
@@ -859,6 +864,85 @@ struct DXFLIB_EXPORT DL_TextData {
     double angle;
 };
 
+/**
+ * Arc Aligned Text Data.
+ */
+struct DXFLIB_EXPORT DL_ArcAlignedTextData {
+
+    /*! Text string */
+    std::string text;
+    /*! Font name */
+    std::string font;
+    /*! Style */
+    std::string style;
+
+    /*! X coordinate of arc center point. */
+    double cx;
+    /*! Y coordinate of arc center point. */
+    double cy;
+    /*! Z coordinate of arc center point. */
+    double cz;
+    /*! Arc radius. */
+    double radius;
+
+    /*! Relative X scale factor. */
+    double xScaleFactor;
+    /*! Text height */
+    double height;
+    /*! Character spacing */
+    double spacing;
+    /*! Offset from arc */
+    double offset;
+    /*! Right offset */
+    double rightOffset;
+    /*! Left offset */
+    double leftOffset;
+    /*! Start angle (radians) */
+    double startAngle;
+    /*! End angle (radians) */
+    double endAngle;
+    /*! Reversed character order:
+     * false: normal
+     * true: reversed
+     */
+    bool reversedCharacterOrder;
+    /*! Direction
+     * 1: outward from center
+     * 2: inward from center
+     */
+    int direction;
+    /*! Alignment:
+     * 1: fit
+     * 2: left
+     * 3: right
+     * 4: center
+     */
+    int alignment;
+    /*! Side
+     * 1: convex
+     * 2: concave
+     */
+    int side;
+    /*! Bold flag */
+    bool bold;
+    /*! Italic flag */
+    bool italic;
+    /*! Underline flag */
+    bool underline;
+    /*! Character set value. Windows character set identifier. */
+    int characerSet;
+    /*! Pitch and family value. Windows pitch and character family identifier. */
+    int pitch;
+    /*! Font type:
+     * false: TTF
+     * true: SHX
+     */
+    bool shxFont;
+    /*! Wizard flag */
+    bool wizard;
+    /*! Arc handle/ID */
+    int arcHandle;
+};
 
 /**
  * Block attribute data.
