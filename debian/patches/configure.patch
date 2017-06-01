@@ -13,7 +13,7 @@ Index: dxflib-3.12.2/configure.in
 +# Check for one project file
 +#
 +AC_PREREQ([2.67])
-+AC_INIT([dxflib], [3.12.2], [])
++AC_INIT([dxflib], [3.17.0], [])
 +AC_CONFIG_SRCDIR([src/dl_exception.h])
 +AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 +m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
