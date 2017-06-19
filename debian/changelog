@@ -1,11 +1,11 @@
-dxflib (3.17.0-1) UNRELEASED; urgency=medium
+dxflib (3.17.0-1) unstable; urgency=medium
 
   * New upstream release
   * Update debian/copyright: test/* removed; GPL2+ files in debian/*
   * Standards-Version: 3.9.8. No changes required.
   * DH_COMPAT=10
 
- -- Alastair McKinstry <mckinstry@debian.org>  Mon, 22 Feb 2016 11:05:11 +0000
+ -- Alastair McKinstry <mckinstry@debian.org>  Mon, 19 Jun 2017 10:02:34 +0100
 
 dxflib (3.12.2-1) unstable; urgency=medium
 
