@@ -2,7 +2,7 @@ Source: dxflib
 Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Alastair McKinstry <mckinstry@debian.org>
-Build-Depends: debhelper (>= 10), dh-autoreconf, autotools-dev, libx11-dev
+Build-Depends: debhelper (>= 10), libx11-dev
 Standards-Version: 4.0.0
 Section: libs
 Homepage: http://www.qcad.org/en/what-is-dxflib
