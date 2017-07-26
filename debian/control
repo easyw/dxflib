@@ -13,6 +13,7 @@ Package: libdxflib-dev
 Priority: extra
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libdxflib3 (= ${binary:Version}), ${misc:Depends}
 Description: Development files for the dxflib library
  dxflib is a C++ library for reading and writing DXF files. When reading DXF
@@ -24,6 +25,7 @@ Description: Development files for the dxflib library
 
 Package: libdxflib3
 Architecture: any
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Library for reading and writing DXF files
  dxflib is a C++ library for reading and writing DXF files. When reading DXF

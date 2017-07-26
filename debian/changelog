@@ -2,6 +2,7 @@ dxflib (3.17.0-2) UNRELEASED; urgency=medium
 
   * Standards-Version: 4.0.0; no changes required
   * Add debian/gbp.conf file
+  * Label packages as Multi-Arch: same
 
  -- Alastair McKinstry <mckinstry@debian.org>  Wed, 26 Jul 2017 12:19:25 +0100
 
