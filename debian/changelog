@@ -1,9 +1,9 @@
-dxflib (3.17.0-3) UNRELEASED; urgency=medium
+dxflib (3.17.0-3) unstable; urgency=medium
 
   * Standards-Version: 4.1.3; no changes required
   * Point VCS to salsa.debian.org
 
- -- Alastair McKinstry <mckinstry@debian.org>  Wed, 24 Jan 2018 13:14:47 +0000
+ -- Alastair McKinstry <mckinstry@debian.org>  Thu, 01 Mar 2018 17:06:28 +0000
 
 dxflib (3.17.0-2) unstable; urgency=medium
 
