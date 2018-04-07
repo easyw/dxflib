@@ -4,7 +4,7 @@ Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.
 Uploaders: Alastair McKinstry <mckinstry@debian.org>
 Build-Depends: debhelper (>= 10), 
   libx11-dev
-Standards-Version: 4.1.3
+Standards-Version: 4.1.4
 Section: libs
 Homepage: http://www.qcad.org/en/what-is-dxflib
 Vcs-Browser: https://salsa.debian.org:/science-team/dxflib.git

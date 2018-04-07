@@ -18,6 +18,3 @@ override_dh_auto_test:
 override_dh_auto_install:
 	dh_auto_install
 	dh_link -p libdxflib3 $(LIBDIR)/libdxflib.so.3.17.0	 $(LIBDIR)/libdxflib.so.3
-
-get-orig-source:
-	uscan --download-current-version --repack --rename
