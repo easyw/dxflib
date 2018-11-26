@@ -5,6 +5,7 @@ dxflib (3.17.0-4) UNRELEASED; urgency=medium
 
   [ Jelmer Vernooĳ ]
   * Use secure copyright file specification URI.
+  * Trim trailing whitespace.
 
  -- Alastair McKinstry <mckinstry@debian.org>  Sat, 07 Apr 2018 10:20:50 +0100
 
@@ -54,7 +55,7 @@ dxflib (2.5.0.0-4) unstable; urgency=medium
 
 dxflib (2.5.0.0-3) unstable; urgency=medium
 
-  * Adopt dxflib. Closes: #733823. 
+  * Adopt dxflib. Closes: #733823.
 
  -- Alastair McKinstry <mckinstry@debian.org>  Fri, 14 Aug 2015 17:31:11 +0100
 

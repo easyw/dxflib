@@ -2,7 +2,7 @@ Source: dxflib
 Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Alastair McKinstry <mckinstry@debian.org>
-Build-Depends: debhelper (>= 10), 
+Build-Depends: debhelper (>= 10),
   libx11-dev
 Standards-Version: 4.1.5
 Section: libs
