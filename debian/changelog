@@ -1,6 +1,10 @@
 dxflib (3.17.0-4) UNRELEASED; urgency=medium
 
+  [ Alastair McKinstry ]
   * Standards-Version: 4.1.5; remove get-orig-source
+
+  [ Jelmer Vernooĳ ]
+  * Use secure copyright file specification URI.
 
  -- Alastair McKinstry <mckinstry@debian.org>  Sat, 07 Apr 2018 10:20:50 +0100
 
