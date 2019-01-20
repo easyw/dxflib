@@ -1,10 +1,10 @@
-dxflib (3.17.0-3) UNRELEASED; urgency=medium
+dxflib (3.17.0-3) unstable; urgency=medium
 
   * Standards-Version: 4.3.0
   * Point VCS to salsa.debian.org
   * Change homepage to https:
 
- -- Alastair McKinstry <mckinstry@debian.org>  Thu, 01 Mar 2018 17:06:28 +0000
+ -- Alastair McKinstry <mckinstry@debian.org>  Sun, 20 Jan 2019 10:05:09 +0000
 
 dxflib (3.17.0-2) unstable; urgency=medium
 
