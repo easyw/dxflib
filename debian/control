@@ -2,9 +2,9 @@ Source: dxflib
 Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Alastair McKinstry <mckinstry@debian.org>
-Build-Depends: debhelper (>= 10), 
+Build-Depends: debhelper-compat (= 12), 
   libx11-dev
-Standards-Version: 4.3.0
+Standards-Version: 4.4.0
 Section: libs
 Homepage: https://www.qcad.org/en/what-is-dxflib
 Vcs-Browser: https://salsa.debian.org:/science-team/dxflib.git
